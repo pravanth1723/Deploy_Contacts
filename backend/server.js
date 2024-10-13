@@ -18,14 +18,7 @@ const port = 5500;
 connectDb();
 console.log("This is express");
 app.use(express.json());
-app.use(cors({origin:"*"}));
-app.use(cors(
-  {
-    origin:[''],
-    methods:['POST','GET','PUT','DELETE'],
-    credentials:true
-  }
-));
+// app.use(cors({origin:"*"}));
 console.log('hi');
 app.use("/api/contacts", require("./routes/contactRoute"));
 app.use("/api/users", require("./routes/userRoutes"));

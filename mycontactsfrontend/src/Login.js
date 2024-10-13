@@ -13,7 +13,7 @@ const Login = () => {
     }
     const submitHandler=e=>{
         e.preventDefault();
-        axios.post('http://localhost:5500/api/users/login',data).then(
+        axios.post('https://deploy-contacts-aw3gyy02y-devaki-pravanths-projects.vercel.app/api/users/login',data).then(
             
             response=>{
                 if(response.status >= 200 && response.status < 300)

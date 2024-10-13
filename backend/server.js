@@ -9,14 +9,14 @@ const app = express();
 const allowedOrigins = ['https://deploy-contacts-frontend.vercel.app'];
 
 app.use(cors({
-  origin: allowedOrigins,
+  origin: ["https://deploy-contacts-frontend.vercel.app"],
   methods: ['POST', 'GET', 'PUT', 'DELETE'],
   credentials: true
 }));
 
 // Handle preflight requests
 app.options('*', cors({
-  origin: allowedOrigins,
+  origin: ["https://deploy-contacts-frontend.vercel.app"],
   methods: ['POST', 'GET', 'PUT', 'DELETE'],
   credentials: true
 }));

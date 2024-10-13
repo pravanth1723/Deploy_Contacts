@@ -7,14 +7,14 @@ const app = express();
 
 // Apply CORS middleware first
 app.use(cors({
-  origin: ['https://deploy-contacts-frontend.vercel.app'],
+  origin: ['https://deploy-contacts-frontend.vercel.app/*'],
   methods: ['POST', 'GET', 'PUT', 'DELETE'],
   credentials: true
 }));
 
 // Apply CSP headers next
 app.use((req, res, next) => {
-  res.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://deploy-contacts-frontend.vercel.app;");
+  res.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://deploy-contacts-frontend.vercel.app/*;");
   
   next();
 });

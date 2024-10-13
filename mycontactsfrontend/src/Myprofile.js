@@ -2,8 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import { store } from './App';
 import { Navigate } from 'react-router-dom';
 import axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import Modal from 'react-modal';
 import './myprofilestyles.css';
 

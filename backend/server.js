@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors(
   {
-     origin:['https://deploy-mern-lwhq.vercel.app'],
+     origin:['https://deploy-contacts-frontend.vercel.app'],
     methods:['POST','GET','PUT','DELETE'],
     credentials:true
   }

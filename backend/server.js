@@ -15,11 +15,11 @@ app.use(cors({
 }));
 
 // Handle preflight requests
-app.options('*', cors({
-  origin: ["https://deploy-contacts-frontend.vercel.app"],
-  methods: ['POST', 'GET', 'PUT', 'DELETE'],
-  credentials: true
-}));
+// app.options('*', cors({
+//   origin: ["https://deploy-contacts-frontend.vercel.app"],
+//   methods: ['POST', 'GET', 'PUT', 'DELETE'],
+//   credentials: true
+// }));
 
 // Middleware
 app.use(express.json());

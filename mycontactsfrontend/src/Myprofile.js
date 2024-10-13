@@ -18,7 +18,7 @@ const AddModal = ({ isOpen, onClose, onSave }) => {
     const [token] = useContext(store);
 
     const addContact = () => {
-        axios.post('http://localhost:5500/api/contacts/', {
+        axios.post('https://deploy-contacts-aw3gyy02y-devaki-pravanths-projects.vercel.app/api/contacts/', {
             name,
             email,
             phone
@@ -168,7 +168,7 @@ const MyProfile = () => {
 
     useEffect(() => {
         if (token) {
-            axios.get('http://localhost:5500/api/contacts', {
+            axios.get('https://deploy-contacts-aw3gyy02y-devaki-pravanths-projects.vercel.app/api/contacts', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -191,7 +191,7 @@ const MyProfile = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:5500/api/contacts/${id}`, {
+        axios.delete(`https://deploy-contacts-aw3gyy02y-devaki-pravanths-projects.vercel.app/api/contacts/${id}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -204,7 +204,7 @@ const MyProfile = () => {
     };
 
     const handleSave = (updatedContact) => {
-        axios.put(`http://localhost:5500/api/contacts/${updatedContact._id}`, {
+        axios.put(`https://deploy-contacts-aw3gyy02y-devaki-pravanths-projects.vercel.app/api/contacts/${updatedContact._id}`, {
             name: updatedContact.name,
             email: updatedContact.email,
             phone: updatedContact.phone
